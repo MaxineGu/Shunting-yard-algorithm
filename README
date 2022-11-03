@@ -1,0 +1,23 @@
+Jiayi Gu 31526890 
+Project Partner: Yuxin Ren 
+
+This project is to use the Shunting-yard algorithm to compute a specific string input by transferring it from an infix expression to a post-fix expression and then evaluating them. 
+This project contains 8 files including infix_expr_short.txt for testing. In.java is for importing a file, which is from Lab 2. URCalculator.java includes the main method and the Shunting yard algorithm by using Queue.java, Stack.java, and URArrayList.java. Other classes are used for implementing these three classes. 
+
+The main algorithm mainly can be divided into 3 parts: 
+1) StringToToken: It will convert the string to an array by recognizing between operand and operator and putting each token in a string. 
+2) infix to postfix: This will convert the array to a postfix expression and store it in the queue. 
+3) postfix evaluation: It will evaluate the postfix expression by using a Double Stack. 
+In the main method, it reads each line from input and stores them in an array, evaluates each string (or element) in the array, stored the value in another array, and finally writes the new array to a new file.
+The main method contains 2 arguments, the first one should be the file name of input strings, and the other one should be the file name of all output answers. (Don't need to create an output file, the program will create it. Only the desired name is good.)
+Within the URcalculator, I use the reference from Baeldung to check whether a token is numeric(or operand). The link is here: https://www.baeldung.com/java-check-string-number#:~:text=Perhaps%20the%20easiest%20and%20the,Float.
+The class In.java is from Lab2, which is written by Robert Sedgewick and Kevin Wayne, for reading the input file. 
+The main obstacle I face is dealing with the situation that the stack or the queue is empty. If it is empty, then I cannot get the top value or the first value of the stack or queue, which will cause an error when running the program. 
+For extra credit: 
+1) Trigonometric function and modulo can be calculated. (sin, cos, tan, %)
+2) It can deal with the input without whitespace （eg. input 3+2/3 is ok for my program)
+3) It can handle some errors including:
+	a) Invalid character (eg. Invalid function, x,y,z,$,etc)
+	b) unmatched parentheses (i.e. the number of left parentheses and right parenthesis is not the same)
+	c) invalid inputs (eg. 3+*8; 3+(3*); etc)
+
